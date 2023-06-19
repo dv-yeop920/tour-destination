@@ -30,16 +30,21 @@ import { styled } from "styled-components";
             `;
 
             export const Board = styled.div`
-                max-width: 1150px;
-                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 list-style: none;
+                margin: 0px auto;
+
             `;
             export const Li = styled.li`
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 border-bottom: 1px solid #ccc;
-                padding:5px;
+                margin-right: 40px;
+                padding: 0px 10px 0px 10px;
+                width: 1140px;
                 cursor: pointer;
             `;
             export const Title = styled.h3`

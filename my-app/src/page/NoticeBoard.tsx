@@ -73,7 +73,7 @@ const NoticeBoard = () => {
         <>
         <NoticeBoardInput/>
             <styled.Board>
-                <ul>
+            <ul className='post-container'>
                 <styled.Li style={{height:'100px',color:'rgb(200, 50, 100)'}}>
                     <styled.Title>
                         [공지]
@@ -82,8 +82,6 @@ const NoticeBoard = () => {
                     </styled.Author>
                     </styled.Title>
                 </styled.Li>
-                </ul>
-            <ul className='post-container'>
                 {posts.map(post => {
                     return(
                         
@@ -98,6 +96,8 @@ const NoticeBoard = () => {
                                     ❤️
                                 </span>
                                 <span className='like-count'>0</span>
+                                <span className='watching-count'>조회 0</span>
+                                <span className='comment-count'>댓글 0</span>
                                 </styled.Author>
                             </div>
                             <div className='post-image-container'>
