@@ -37,20 +37,13 @@
   }
 }
 */
-.board-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.post-container {
-  border-radius: 4px;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-.post-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ccc;
+.writing {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
 }
