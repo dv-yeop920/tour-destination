@@ -7,7 +7,7 @@ import * as styled from '../style/styledComponents';
 const ScrollToTopButton = () => {
     return (
         <>
-            <styled.ScrollToTopButton>
+            <styled.ScrollToTopButton className='sroll-to-top'>
                 <FontAwesomeIcon
                     icon={faUpLong}
                     size = '2x'/>

@@ -10,17 +10,16 @@ const WritingPage = () => {
         <div className="container mt-4">
             <form >
                 <div className="form-group">
-                    <h3>제목</h3>
                     <input
                     type="text"
                     className="form-control"
+                    placeholder='제목'
                     id="title"/>
                 </div>
                 <div className="form-group">
-                <h3>내용</h3>
                 <CKEditor
                 editor={ClassicEditor}
-                data="<p></p>"
+                data="<p>행복했던 여행 후기를 공유해 주세요!</p>"
                 />
                 </div>
                 <div className='button-group'>
