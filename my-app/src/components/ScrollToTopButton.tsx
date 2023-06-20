@@ -8,11 +8,9 @@ const ScrollToTopButton = () => {
     return (
         <>
             <styled.ScrollToTopButton>
-                <styled.ScrollToTopIcon>
                 <FontAwesomeIcon
                     icon={faUpLong}
                     size = '2x'/>
-                </styled.ScrollToTopIcon>
             </styled.ScrollToTopButton>
         </>
     );

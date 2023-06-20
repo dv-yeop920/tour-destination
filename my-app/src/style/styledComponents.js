@@ -59,11 +59,14 @@ import { styled } from "styled-components";
                 padding: 10px 23px 10px 23px;
                 border: none;
                 color: white;
+                font-size: 16px;
+                font-weight: 600;
                 background-color: #27ae60;
                 border-radius: 10px;
                 margin-right: 20px;
                 cursor: pointer;
                 box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px -4px;
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
             `;
 
             export const Input = styled.input`
@@ -99,10 +102,6 @@ import { styled } from "styled-components";
                 outline: none;
                 cursor: pointer;
                 font-size: 15px;
-                padding-left: 11px;
+                padding-left: 6px;
                 box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px 2px;
                 `;
-
-                export const ScrollToTopIcon = styled.span`
-                `;
-                
