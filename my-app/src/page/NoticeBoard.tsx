@@ -73,7 +73,6 @@ const NoticeBoard = () => {
         <>
         <NoticeBoardInput/>
             <styled.Board>
-            <ul className='post-container'>
                 <styled.Li style={{height:'100px',color:'rgb(200, 50, 100)'}}>
                     <styled.Title>
                         [공지]
@@ -110,7 +109,6 @@ const NoticeBoard = () => {
                         </styled.Li>
                     )
                 })}
-                </ul>
             </styled.Board>
         </>
     );

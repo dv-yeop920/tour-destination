@@ -10,19 +10,15 @@ const NoticeBoardInput = () => {
     return (
         <>
             <form>
-                <div className='input-container'>
+                <styled.InputBox>
                     <styled.Input></styled.Input>
                     <styled.Button>검색</styled.Button>
                     <FontAwesomeIcon
                     onClick={() => navigate('/WritingPage')}
                     className ='writing'
                     icon={faPenToSquare}
-                    size = '2x'
-                    style={{ 
-                        cursor: 'pointer',
-                        boxShadow: 'rgba(0, 0, 0, 0.1) -4px 9px 25px -6px'
-                    }}/>
-                </div>
+                    size = '2x'/>
+                </styled.InputBox>
             </form>
         </>
     );

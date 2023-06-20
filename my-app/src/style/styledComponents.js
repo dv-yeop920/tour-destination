@@ -4,6 +4,7 @@ import { styled } from "styled-components";
             export const Navbar = styled.nav`
                 background-color: white;
                 box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+                margin-bottom: 30px;
                 position: sticky;
                 top: 0;
                 z-index:1;
@@ -29,23 +30,22 @@ import { styled } from "styled-components";
                 cursor: pointer;
             `;
 
-            export const Board = styled.div`
+            export const Board = styled.ul`
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                list-style: none;
-                margin: 0px auto;
-
+                flex-direction: column;
             `;
             export const Li = styled.li`
+                list-style: none;
+                padding: 0px 13px 0px 13px;
+                border-bottom: 0.1px solid #ccc;
+                cursor: pointer;
+                background-color: white;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                border-bottom: 1px solid #ccc;
-                margin-right: 40px;
-                padding: 0px 10px 0px 10px;
-                width: 1140px;
-                cursor: pointer;
+                width: 80%;
             `;
             export const Title = styled.h3`
                 margin-bottom: 20px;
@@ -80,3 +80,10 @@ import { styled } from "styled-components";
                 cursor: pointer;
                 box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -10px;
             `;
+
+            export const InputBox = styled.div`
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+            `
