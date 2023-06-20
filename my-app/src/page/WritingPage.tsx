@@ -3,7 +3,7 @@ import React from 'react';
 const WritingPage = () => {
     return (
         <>
-            글쓰기 페이지
+            글작성 페이지
         </>
     );
 };

@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 
             export const Navbar = styled.nav`
                 background-color: white;
-                box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
                 margin-bottom: 30px;
                 position: sticky;
                 top: 0;
@@ -11,7 +11,6 @@ import { styled } from "styled-components";
             `;
 
             export const NavTitle = styled.h1`
-                font-size: 30px;
                 margin-left: 50px;
                 margin-right: 100px;
                 cursor: pointer;
@@ -64,7 +63,7 @@ import { styled } from "styled-components";
                 border-radius: 10px;
                 margin-right: 20px;
                 cursor: pointer;
-                box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px 5px;
+                box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px -4px;
             `;
 
             export const Input = styled.input`
@@ -76,9 +75,8 @@ import { styled } from "styled-components";
                 font-size: 16px;
                 border: none;
                 border-radius: 10px;
-                width: 100px;
                 cursor: pointer;
-                box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -10px;
+                box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px -10px;
             `;
 
             export const InputBox = styled.div`
@@ -86,4 +84,25 @@ import { styled } from "styled-components";
                 justify-content: center;
                 align-items: center;
                 margin-bottom: 20px;
-            `
+            `;
+
+            export const ScrollToTopButton = styled.button`
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: #333;
+                color: #fff;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                font-size: 15px;
+                padding-left: 11px;
+                box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px 2px;
+                `;
+
+                export const ScrollToTopIcon = styled.span`
+                `;
+                
