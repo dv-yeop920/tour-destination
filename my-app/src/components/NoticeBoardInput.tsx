@@ -11,12 +11,12 @@ const NoticeBoardInput = () => {
         <>
             <form>
                 <styled.InputBox>
-                    <styled.Input></styled.Input>
-                    <styled.Button
+                    <styled.Input type="text"/>
+                    <styled.DefaultButton
                     type='submit'
-                    className='btn'>
+                    className='default-btn'>
                         검색
-                    </styled.Button>
+                    </styled.DefaultButton>
                     <FontAwesomeIcon
                     onClick={() => navigate('/WritingPage')}
                     className ='writing'

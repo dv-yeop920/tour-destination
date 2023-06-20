@@ -97,7 +97,7 @@ const NoticeBoardList = () => {
                             <div className='post-image-container'>
                                 <img src={post.image} alt="" 
                                 style={{
-                                width:'100px', 
+                                width:'90px', 
                                 height:'80px',
                                 marginTop:'4px'}}/>
                             </div>

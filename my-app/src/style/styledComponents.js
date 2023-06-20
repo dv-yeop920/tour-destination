@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 
             export const Navbar = styled.nav`
                 background-color: white;
-                box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
+                box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px -20px;
                 margin-bottom: 30px;
                 position: sticky;
                 top: 0;
@@ -45,6 +45,7 @@ import { styled } from "styled-components";
                 justify-content: space-between;
                 align-items: center;
                 width: 80%;
+                box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px -15px;
             `;
             export const Title = styled.h3`
                 margin-bottom: 20px;
@@ -55,20 +56,35 @@ import { styled } from "styled-components";
                 color:#888;
             `;
 
-            export const Button = styled.button`
+            export const DefaultButton = styled.button`
                 padding: 10px 23px 10px 23px;
                 border: none;
                 color: white;
-                font-size: 16px;
+                font-size: 17px;
+                text-align: center;
                 font-weight: 600;
                 background-color: #27ae60;
-                border-radius: 10px;
+                border-radius: 5px;
                 margin-right: 20px;
                 cursor: pointer;
-                box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px -4px;
+                box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px -15px;
                 transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
             `;
 
+            export const DeleteButton = styled.button`
+                padding: 10px 23px 10px 23px;
+                border: none;
+                color: white;
+                background-color: #bdc3c7;
+                font-size: 17px;
+                text-align: center;
+                font-weight: 600;
+                border-radius: 5px;
+                margin-right: 20px;
+                cursor: pointer;
+                box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px -15px;
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+            `
             export const Input = styled.input`
                 flex:0.5;
                 text-align: center;
@@ -79,7 +95,7 @@ import { styled } from "styled-components";
                 border: none;
                 border-radius: 10px;
                 cursor: pointer;
-                box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px -10px;
+                box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px -15px;
             `;
 
             export const InputBox = styled.div`
