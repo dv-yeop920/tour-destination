@@ -31,6 +31,9 @@ const WritingPage = () => {
                     <div style={{width:'82px'}}>
                     </div>
                     <styled.DefaultButton
+                    onClick={() => {
+                        
+                    }}
                     type='submit'
                     className='default-btn'>
                         등록

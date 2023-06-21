@@ -1,16 +1,15 @@
 import React from 'react';
 import NoticeBoardInput from '../components/NoticeBoardInput';
 import NoticeBoardList from '../components/NoticeBoardList';
-import  ScrollToTopButton  from '../components/ScrollToTopButton';
+import ScrollToTopButton  from '../components/ScrollToTopButton';
 
 
 
-
-const NoticeBoard = () => {
+const NoticeBoard  = () => {
     return (
         <>
-        <NoticeBoardInput/>
-        <NoticeBoardList/>
+        <NoticeBoardInput />
+        <NoticeBoardList />
         <ScrollToTopButton/>
         </>
     );
