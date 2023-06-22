@@ -6,8 +6,7 @@ import Header from './components/Header';
 import WritingPage from './page/WritingPage';
 import BoardDetail from './components/BoardDetail';
 
-
-function App() {
+const App = () => {
   return (
     <>
     <Header/>
@@ -19,6 +18,7 @@ function App() {
     </Routes>
     </>
   );
+  
 }
 
 export default App;

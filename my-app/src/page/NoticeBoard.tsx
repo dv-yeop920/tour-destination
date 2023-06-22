@@ -4,7 +4,6 @@ import NoticeBoardList from '../components/NoticeBoardList';
 import ScrollToTopButton  from '../components/ScrollToTopButton';
 
 
-
 const NoticeBoard  = () => {
     return (
         <>

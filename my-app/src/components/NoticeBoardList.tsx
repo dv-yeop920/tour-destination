@@ -1,10 +1,10 @@
 import React from 'react';
 import * as styled from '../style/styledComponents';
 import { useNavigate } from 'react-router';
-import posts from '../data';
-
+import { useSelector } from 'react-redux'; 
 
 const NoticeBoardList = () => {
+    const postData = useSelector((state:any) => {return state.posts})
     const navigate = useNavigate();
     return (
         <>
@@ -26,7 +26,7 @@ const NoticeBoardList = () => {
                     </styled.Author>
                     </styled.Title>
                 </styled.Li>
-                {posts.map((post) => {
+                {postData.map((post:any) => {
                     return(
                         
                         <styled.Li onClick={() => navigate('/detail:id')}>
