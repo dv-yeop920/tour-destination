@@ -18,7 +18,7 @@ const NoticeBoardInput = () => {
                         검색
                     </styled.DefaultButton>
                     <FontAwesomeIcon
-                    onClick={() => navigate('/WritingPage')}
+                    onClick={() => navigate('/writingPage')}
                     className ='writing'
                     icon={faPenToSquare}
                     size = '2x'/>

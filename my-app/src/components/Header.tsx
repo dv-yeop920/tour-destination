@@ -13,7 +13,7 @@ const Header = () => {
                 <styled.MenuItem>Menu 1</styled.MenuItem>
                 <styled.MenuItem>Menu 2</styled.MenuItem>
                 <styled.MenuItem>Menu 3</styled.MenuItem>
-                <styled.MenuItem onClick={() => navigate('/NoticeBoard')}>자유 게시판</styled.MenuItem>
+                <styled.MenuItem onClick={() => navigate('/noticeBoard')}>자유 게시판</styled.MenuItem>
             </styled.MenuList>
         </styled.Navbar>
         </>
