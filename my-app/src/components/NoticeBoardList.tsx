@@ -2,9 +2,12 @@ import React from 'react';
 import * as styled from '../style/styledComponents';
 import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux'; 
+import { RootState } from '../store/store';
 
-const NoticeBoardList = () => {
-    const postData = useSelector((state:any) => {return state.posts})
+
+
+const NoticeBoardList:React.FC = () => {
+    const postData = useSelector((state:RootState) => {return state.posts})
     const navigate = useNavigate();
     return (
         <>
@@ -26,10 +29,10 @@ const NoticeBoardList = () => {
                     </styled.Author>
                     </styled.Title>
                 </styled.Li>
-                {postData.map((post:any) => {
+                {postData.map((post) => {
                     return(
                         
-                        <styled.Li onClick={() => navigate('/detail:id')}>
+                        <styled.Li onClick={() => navigate(`/detail:${post.id}`)}>
                             <div className='post-box'>
                                 <styled.Title>
                                     {post.title}
@@ -47,8 +50,8 @@ const NoticeBoardList = () => {
                             <div className='post-image-container'>
                                 <img  alt="" 
                                 style={{
-                                width:'90px', 
-                                height:'80px',
+                                width:'80px', 
+                                height:'70px',
                                 marginTop:'4px'}}/>
                             </div>
                         </styled.Li>

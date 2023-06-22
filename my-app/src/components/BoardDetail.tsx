@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router';
-const BoardDetail = ():JSX.Element => {
+const BoardDetail = () => {
     const {id} = useParams();
     return (
         <>

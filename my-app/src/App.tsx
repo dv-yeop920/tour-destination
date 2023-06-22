@@ -8,7 +8,7 @@ import BoardDetail from './components/BoardDetail';
 import Main from './page/Main';
 import DestinationSearch from './page/DestinationSearch';
 
-const App = () => {
+const App:React.FC = () => {
   return (
     <>
     <Header/>
