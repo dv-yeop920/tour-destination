@@ -1,13 +1,12 @@
 import React from 'react';
 import * as styled from '../style/styledComponents';
 import { useNavigate } from 'react-router';
-import { useSelector } from 'react-redux'; 
-import { RootState } from '../store/store';
+import { PostType } from '../model/Board';
 
 
 
-const NoticeBoardList:React.FC = () => {
-    const postData = useSelector((state:RootState) => {return state.posts})
+const NoticeBoardList = ({post}:{post:PostType[]}) => {
+    
     const navigate = useNavigate();
     return (
         <>
@@ -29,7 +28,7 @@ const NoticeBoardList:React.FC = () => {
                     </styled.Author>
                     </styled.Title>
                 </styled.Li>
-                {postData.map((post) => {
+                {post.map((post) => {
                     return(
                         
                         <styled.Li onClick={() => navigate(`/detail:${post.id}`)}>
