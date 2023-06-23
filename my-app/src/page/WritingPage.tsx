@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as styled from '../style/styledComponents';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { PostType } from '../model/Board';
 
 
 const WritingPage = () => {
+    const [userWritingValue , setUserWritingValue] = useState('');
     return (
         <>
         <div className="container mt-4">
