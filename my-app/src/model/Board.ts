@@ -1,5 +1,9 @@
 
 
+export interface PostListType {
+    postList:PostType,
+    userFindPost(findPost:Post[]):void
+}
 
 export type PostType = {
     post: Post[]
@@ -12,8 +16,4 @@ export type Post = {
     like:number,
     views:number,
     comment:number,
-}
-
-export interface PostListType {
-    postList:PostType
 }

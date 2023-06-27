@@ -3,19 +3,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faPenToSquare} from "@fortawesome/free-solid-svg-icons";
 import * as styled from '../style/styledComponents';
 import { useNavigate } from 'react-router';
-import { PostListType } from '../model/Board';
+import { Post, PostListType } from '../model/Board';
 
 
 
-const NoticeBoardList:React.FC<PostListType> = ({postList}) => {
+const NoticeBoardList:React.FC<PostListType> = ({postList},{userFindPost}) => {
     
     const navigate = useNavigate();
     const [userInputValue , setUserInputValue] = useState<string>('');
-    
+    const handleFilterPost = (userValue:string):void => {
+        const filterPost:Post[] = postList.post.filter((post , i) => {
+            post.title.includes(userValue);
+        });
+        userFindPost(filterPost);
+    }
     return (
         
         <>
-        <form>
+        <form onSubmit={(e) => {
+            e.preventDefault();
+        }}>
                 <styled.InputBox>
                     <styled.Input 
                     type="text"
@@ -24,6 +31,7 @@ const NoticeBoardList:React.FC<PostListType> = ({postList}) => {
                         console.log(userInputValue)
                     }} />
                     <styled.DefaultButton
+                    onClick={() => {handleFilterPost(userInputValue)}}
                     type='submit'
                     className='default-btn'>
                         검색
@@ -54,10 +62,12 @@ const NoticeBoardList:React.FC<PostListType> = ({postList}) => {
                     </styled.Author>
                     </styled.Title>
                 </styled.Li>
-                {postList.post.map((post) => {
+                {postList.post.map((post , i) => {
                     return(
                         
-                        <styled.Li onClick={() => navigate(`/detail:${post.id}`)}>
+                        <styled.Li 
+                        key={postList.post[i].id}
+                        onClick={() => navigate(`/detail:${post.id}`)}>
                             <div className='post-box'>
                                 <styled.Title>
                                     {post.title}

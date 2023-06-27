@@ -8,19 +8,33 @@ import BoardDetail from './components/BoardDetail';
 import Main from './page/Main';
 import DestinationSearch from './page/DestinationSearch';
 import PostData from './BoardData';
-import { PostType } from './model/Board';
+import { Post, PostType } from './model/Board';
 
 const App:React.FC = () => {
   const [post , setPost] = useState<PostType>(PostData);
+  const userFindPost = (filterPost:Post[]):void => {
+    setPost((prevPost) => ({ ...prevPost, post: filterPost }));
+  }
   return (
     <>
     <Header/>
     <Routes>
-      <Route path='/' element = {<Main/>} />
-      <Route path='/search' element = {<DestinationSearch/>} />
-      <Route path='/noticeBoard' element = {<NoticeBoard postList = {post} />} />
-      <Route path='/writingPage' element = {<WritingPage />} />
-      <Route path='/detail:id' element = {<BoardDetail/>} />
+      <Route path='/' 
+      element = {<Main/>} />
+
+      <Route path='/search' 
+      element = {<DestinationSearch/>} />
+
+      <Route path='/noticeBoard' 
+      element = {<NoticeBoard
+        postList = {post} 
+        userFindPost = {userFindPost}/>}/>
+
+      <Route path='/writingPage' 
+      element = {<WritingPage />} />
+
+      <Route path='/detail:id' 
+      element = {<BoardDetail/>} />
     </Routes>
     </>
   );

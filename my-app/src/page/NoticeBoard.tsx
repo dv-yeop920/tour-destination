@@ -4,10 +4,10 @@ import ScrollToTopButton  from '../components/ScrollToTopButton';
 import { PostListType } from '../model/Board';
 
 
-const NoticeBoard:React.FC<PostListType> = ({postList}) => {
+const NoticeBoard:React.FC<PostListType> = ({postList},{userFindPost}) => {
     return (
         <>
-        <NoticeBoardList postList = {postList}/>
+        <NoticeBoardList postList = {postList} userFindPost = {userFindPost}/>
         <ScrollToTopButton/>
         </>
     );
