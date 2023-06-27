@@ -5,9 +5,18 @@ import * as styled from '../style/styledComponents';
 
 
 const ScrollToTopButton = () => {
+    const handleClickScroll = ():void => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <>
-            <styled.ScrollToTopButton className='sroll-to-top'>
+            <styled.ScrollToTopButton 
+            className='sroll-to-top'
+            onClick={handleClickScroll} >
                 <FontAwesomeIcon
                     icon={faUpLong}
                     size = '2x'/>
