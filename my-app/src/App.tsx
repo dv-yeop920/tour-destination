@@ -8,13 +8,10 @@ import BoardDetail from './components/BoardDetail';
 import Main from './page/Main';
 import DestinationSearch from './page/DestinationSearch';
 import PostData from './BoardData';
-import { Post, PostType } from './model/Board';
+import { PostListType } from './model/Board';
 
 const App:React.FC = () => {
-  const [post , setPost] = useState<PostType>(PostData);
-  const userFindPost = (filterPost:Post[]):void => {
-    setPost((prevPost) => ({ ...prevPost, post: filterPost }));
-  }
+  const [postList] = useState<PostListType>(PostData);
   return (
     <>
     <Header/>
@@ -27,8 +24,7 @@ const App:React.FC = () => {
 
       <Route path='/noticeBoard' 
       element = {<NoticeBoard
-        postList = {post} 
-        userFindPost = {userFindPost}/>}/>
+        postList = {postList.postList} />}/>
 
       <Route path='/writingPage' 
       element = {<WritingPage />} />

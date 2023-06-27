@@ -1,13 +1,10 @@
 
 
 export interface PostListType {
-    postList:PostType,
-    userFindPost(findPost:Post[]):void
+    postList:Post[],
 }
 
-export type PostType = {
-    post: Post[]
-}
+
 
 export type Post = {
     id:number,

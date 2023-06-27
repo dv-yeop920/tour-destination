@@ -1,9 +1,9 @@
-import { PostType } from './model/Board';
+import { PostListType } from './model/Board';
 
 
-const PostData:PostType = 
+const PostData:PostListType = 
 {
-    post:[
+    postList:[
         {
             id:0,
             title: '첫번째 게시물',

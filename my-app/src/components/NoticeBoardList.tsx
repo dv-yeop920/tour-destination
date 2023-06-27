@@ -7,15 +7,16 @@ import { Post, PostListType } from '../model/Board';
 
 
 
-const NoticeBoardList:React.FC<PostListType> = ({postList},{userFindPost}) => {
+const NoticeBoardList:React.FC<PostListType> = ({postList}) => {
     
     const navigate = useNavigate();
     const [userInputValue , setUserInputValue] = useState<string>('');
+    const [filteringPost , setFilteringPost] = useState<PostListType>();
     const handleFilterPost = (userValue:string):void => {
-        const filterPost:Post[] = postList.post.filter((post , i) => {
-            post.title.includes(userValue);
+        const filterPost:Post[] = postList.filter((post:Post , i:number) => {
+            return post.title.includes(userValue);
         });
-        userFindPost(filterPost);
+        setFilteringPost({postList:filterPost});
     }
     return (
         
@@ -28,7 +29,6 @@ const NoticeBoardList:React.FC<PostListType> = ({postList},{userFindPost}) => {
                     type="text"
                     onChange={(e) => {
                         setUserInputValue(e.target.value);
-                        console.log(userInputValue)
                     }} />
                     <styled.DefaultButton
                     onClick={() => {handleFilterPost(userInputValue)}}
@@ -62,11 +62,40 @@ const NoticeBoardList:React.FC<PostListType> = ({postList},{userFindPost}) => {
                     </styled.Author>
                     </styled.Title>
                 </styled.Li>
-                {postList.post.map((post , i) => {
+                {filteringPost ? filteringPost?.postList.map((post , i) => {
+                    return(
+                        <styled.Li 
+                        key={postList[i].id}
+                        onClick={() => navigate(`/detail:${post.id}`)}>
+                            <div className='post-box'>
+                                <styled.Title>
+                                    {post.title}
+                                </styled.Title>
+                                <styled.Author>
+                                {post.author}
+                                <span className='like'>
+                                    ❤️
+                                </span>
+                                <span className='like-count'>{post.like}</span>
+                                <span className='watching-count'>조회 {post.views}</span>
+                                <span className='comment-count'>댓글 {post.comment}</span>
+                                </styled.Author>
+                            </div>
+                            <div className='post-image-container'>
+                                <img  alt="" 
+                                style={{
+                                width:'80px', 
+                                height:'70px',
+                                marginTop:'4px'}}/>
+                            </div>
+                        </styled.Li>
+                    )
+                }):
+                postList.map((post , i) => {
                     return(
                         
                         <styled.Li 
-                        key={postList.post[i].id}
+                        key={postList[i].id}
                         onClick={() => navigate(`/detail:${post.id}`)}>
                             <div className='post-box'>
                                 <styled.Title>

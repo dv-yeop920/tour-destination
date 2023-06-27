@@ -1,18 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { PostType }from "../model/Board";
 
 
-const initialState= [{
-    id:0,
-    title:'제목',
-    author:'작성자'
-}];
 
 const posts = createSlice({
     name:'posts',
-    initialState,
+    initialState:[],
     reducers:{
-        addPost(state , action:PayloadAction<PostType>) {
+        addPost(state , action) {
         }
     }
 });
