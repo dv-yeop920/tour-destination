@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { PostType }from "../model/Board";
 
 
-const initialState:PostType[] = [{
+const initialState= [{
     id:0,
     title:'제목',
     author:'작성자'

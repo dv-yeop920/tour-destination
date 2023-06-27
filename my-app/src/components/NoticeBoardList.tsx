@@ -1,15 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faPenToSquare} from "@fortawesome/free-solid-svg-icons";
 import * as styled from '../style/styledComponents';
 import { useNavigate } from 'react-router';
-import { PostType } from '../model/Board';
+import { PostListType } from '../model/Board';
 
 
 
-const NoticeBoardList = ({post}:{post:PostType[]}) => {
+const NoticeBoardList:React.FC<PostListType> = ({postList}) => {
     
     const navigate = useNavigate();
+    const [userInputValue , setUserInputValue] = useState<string>('');
+    
     return (
+        
         <>
+        <form>
+                <styled.InputBox>
+                    <styled.Input 
+                    type="text"
+                    onChange={(e) => {
+                        setUserInputValue(e.target.value);
+                        console.log(userInputValue)
+                    }} />
+                    <styled.DefaultButton
+                    type='submit'
+                    className='default-btn'>
+                        검색
+                    </styled.DefaultButton>
+                    <FontAwesomeIcon
+                    className ='writing'
+                    onClick={() => {navigate('/writingPage')}}
+                    icon={faPenToSquare}
+                    size = '2x'/>
+                </styled.InputBox>
+            </form>
+            
             <styled.Board>
                 <styled.Li 
                 onClick={() => navigate('/detail:id')}
@@ -28,7 +54,7 @@ const NoticeBoardList = ({post}:{post:PostType[]}) => {
                     </styled.Author>
                     </styled.Title>
                 </styled.Li>
-                {post.map((post) => {
+                {postList.post.map((post) => {
                     return(
                         
                         <styled.Li onClick={() => navigate(`/detail:${post.id}`)}>
@@ -41,9 +67,9 @@ const NoticeBoardList = ({post}:{post:PostType[]}) => {
                                 <span className='like'>
                                     ❤️
                                 </span>
-                                <span className='like-count'>0</span>
-                                <span className='watching-count'>조회 0</span>
-                                <span className='comment-count'>댓글 0</span>
+                                <span className='like-count'>{post.like}</span>
+                                <span className='watching-count'>조회 {post.views}</span>
+                                <span className='comment-count'>댓글 {post.comment}</span>
                                 </styled.Author>
                             </div>
                             <div className='post-image-container'>
@@ -58,6 +84,7 @@ const NoticeBoardList = ({post}:{post:PostType[]}) => {
                 })}
             </styled.Board>
         </>
+        
     );
 };
 

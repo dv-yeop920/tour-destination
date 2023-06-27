@@ -7,17 +7,18 @@ import WritingPage from './page/WritingPage';
 import BoardDetail from './components/BoardDetail';
 import Main from './page/Main';
 import DestinationSearch from './page/DestinationSearch';
-import BoardData from './BoardData';
+import PostData from './BoardData';
+import { PostType } from './model/Board';
 
 const App:React.FC = () => {
-  const [post , setPost] = useState(BoardData);
+  const [post , setPost] = useState<PostType>(PostData);
   return (
     <>
     <Header/>
     <Routes>
       <Route path='/' element = {<Main/>} />
       <Route path='/search' element = {<DestinationSearch/>} />
-      <Route path='/noticeBoard' element = {<NoticeBoard post = {post}/>} />
+      <Route path='/noticeBoard' element = {<NoticeBoard postList = {post} />} />
       <Route path='/writingPage' element = {<WritingPage />} />
       <Route path='/detail:id' element = {<BoardDetail/>} />
     </Routes>
