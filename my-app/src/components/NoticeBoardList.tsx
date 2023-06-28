@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import * as styled from '../style/styledComponents';
 import { useNavigate } from 'react-router';
 import { Post, PostListType } from '../model/Board';
-import WritingIcon from './WritingIcon';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+
 
 
 
@@ -60,6 +62,7 @@ const NoticeBoardList:React.FC<PostListType> = ({postList}) => {
     return (
         <>
         <form
+        className='input-form'
         onSubmit={(e) => {
             e.preventDefault();
         }}>
@@ -77,7 +80,11 @@ const NoticeBoardList:React.FC<PostListType> = ({postList}) => {
                 }}>
                     검색
                 </styled.DefaultButton>
-                <WritingIcon/>
+                <FontAwesomeIcon
+                    className ='writing'
+                    onClick={() => {navigate('/writingPage')}}
+                    icon={faPenToSquare}
+                    size = '2x'/>
             </styled.InputBox>
         </form>
             
@@ -85,18 +92,17 @@ const NoticeBoardList:React.FC<PostListType> = ({postList}) => {
             <styled.Li 
             onClick={() => navigate('/detail:id')}
             style={{
-                height:'100px',
                 color:'rgb(200, 50, 100)'
             }}>
                 <styled.Title>
                     [공지]
-                <styled.Author 
-                style={{
-                    fontSize:'16px',
-                    color:'black'
-                }}>
-                    게시판 이용 수칙
-                </styled.Author>
+                    <styled.Author 
+                    style={{
+                        fontSize:'16px',
+                        color:'black'
+                    }}>
+                        게시판 이용 수칙
+                    </styled.Author>
                 </styled.Title>
             </styled.Li>
             {PostsRender()}
