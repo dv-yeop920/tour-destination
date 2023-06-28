@@ -29,7 +29,7 @@ const NoticeBoardList:React.FC<PostListType> = ({postList}) => {
             return(
                 <styled.Li 
                 key={posts[i].id}
-                onClick={() => navigate(`/detail:${post.id}`)
+                onClick={() => navigate(`/detail/${post.id}`)
                 }>
                     <div className='post-box'>
                         <styled.Title>

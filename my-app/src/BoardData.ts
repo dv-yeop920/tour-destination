@@ -32,6 +32,7 @@ const PostData:PostListType =
             id:3,
             title: '부산 해운대',
             author: '작성자4',
+            content:'재밌지만 어려워',
             like: 5,
             views: 10,
             comment: 5
@@ -56,6 +57,7 @@ const PostData:PostListType =
             id:6,
             title: '강화도 바다',
             author: '작성자7',
+            content:'짜증나아아아아아아아아아아아아아아아아',
             like: 1,
             views: 11,
             comment: 0
@@ -72,6 +74,7 @@ const PostData:PostListType =
             id:8,
             title: '서울 놀이공원',
             author: '작성자2',
+            content:'타입스크립트 넘 어려워',
             like: 5,
             views: 10,
             comment: 5
