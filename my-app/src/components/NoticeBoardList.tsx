@@ -12,14 +12,14 @@ const NoticeBoardList:React.FC<PostListType> = ({postList}) => {
     const navigate = useNavigate();
     const [userInputValue , setUserInputValue] = useState<string>('');
     const [filteringPost , setFilteringPost] = useState<PostListType>();
+
     const handleFilterPost = (userValue:string):void => {
-        const filterPost:Post[] = postList.filter((post:Post , i:number) => {
+        const filterPost:Post[] = postList.filter((post:Post) => {
             return post.title.includes(userValue);
         });
         setFilteringPost({postList:filterPost});
     }
     return (
-        
         <>
         <form onSubmit={(e) => {
             e.preventDefault();
@@ -31,7 +31,9 @@ const NoticeBoardList:React.FC<PostListType> = ({postList}) => {
                         setUserInputValue(e.target.value);
                     }} />
                     <styled.DefaultButton
-                    onClick={() => {handleFilterPost(userInputValue)}}
+                    onClick={() => {
+                        handleFilterPost(userInputValue);
+                    }}
                     type='submit'
                     className='default-btn'>
                         검색
@@ -62,7 +64,7 @@ const NoticeBoardList:React.FC<PostListType> = ({postList}) => {
                     </styled.Author>
                     </styled.Title>
                 </styled.Li>
-                {filteringPost ? filteringPost?.postList.map((post , i) => {
+                {filteringPost ? filteringPost?.postList.map((post:any , i:any) => {
                     return(
                         <styled.Li 
                         key={postList[i].id}

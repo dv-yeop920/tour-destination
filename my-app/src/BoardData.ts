@@ -83,7 +83,7 @@ const PostData:PostListType =
             like: 5,
             views: 10,
             comment: 5
-        },
+        }
     ]
 }
 

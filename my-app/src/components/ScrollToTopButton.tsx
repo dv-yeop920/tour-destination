@@ -5,6 +5,7 @@ import * as styled from '../style/styledComponents';
 
 
 const ScrollToTopButton = () => {
+    
     const handleClickScroll = ():void => {
         window.scrollTo({
             top: 0,

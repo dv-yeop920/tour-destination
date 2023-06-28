@@ -10,7 +10,9 @@ const WritingPage = () => {
     return (
         <>
         <div className="container mt-4">
-            <form >
+            <form onSubmit={(e) => {
+            e.preventDefault();
+        }}>
                 <div className="form-group">
                     <input
                     type="text"
@@ -26,6 +28,7 @@ const WritingPage = () => {
                 </div>
                 <div className='button-group'>
                     <styled.DeleteButton
+                    onClick={() => alert('정말 취소 하시겠습니까?')}
                     type='submit'
                     className='delete-btn'>
                         취소
@@ -33,9 +36,7 @@ const WritingPage = () => {
                     <div style={{width:'82px'}}>
                     </div>
                     <styled.DefaultButton
-                    onClick={() => {
-                        
-                    }}
+                    onClick={() => alert('게시글 등록 하시겠습니까?')}
                     type='submit'
                     className='default-btn'>
                         등록

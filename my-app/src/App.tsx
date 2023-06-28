@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router';
 import NoticeBoard from './page/NoticeBoard';
@@ -7,11 +7,10 @@ import WritingPage from './page/WritingPage';
 import BoardDetail from './components/BoardDetail';
 import Main from './page/Main';
 import DestinationSearch from './page/DestinationSearch';
-import PostData from './BoardData';
-import { PostListType } from './model/Board';
+
 
 const App:React.FC = () => {
-  const [postList] = useState<PostListType>(PostData);
+  
   return (
     <>
     <Header/>
@@ -24,7 +23,7 @@ const App:React.FC = () => {
 
       <Route path='/noticeBoard' 
       element = {<NoticeBoard
-        postList = {postList.postList} />}/>
+        />}/>
 
       <Route path='/writingPage' 
       element = {<WritingPage />} />
