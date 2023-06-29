@@ -16,7 +16,7 @@ const WritingPage = () => {
         <div className="container mt-4">
             <form onSubmit={(e) => {
             e.preventDefault();
-        }}>
+            }}>
                 <div className="form-group">
                     <input
                     id="title"
@@ -27,28 +27,26 @@ const WritingPage = () => {
                         setUserWritingValue(e.target.value);
                         console.log(userWritingValue)
                     }}/>
+                    <CKEditor
+                    editor={ClassicEditor}
+                    data="<p>행복했던 여행 후기를 공유해 주세요!</p>"
+                    onReady={ editor => {
+                        // You can store the "editor" and use when it is needed.
+                        console.log( 'Editor is ready to use!', editor );
+                    } }
+                    onChange={ ( value, editor ) => {
+                        const data = editor.getData();
+                        setUserWritingValue(data);
+                        console.log(userWritingValue)
+                    } }
+                    onBlur={ ( event, editor ) => {
+                        console.log( 'Blur.', editor );
+                    } }
+                    onFocus={ ( event, editor ) => {
+                        console.log( 'Focus.', editor );
+                    } }/>
                 </div>
-                <div className="form-group">
-                <CKEditor
-                editor={ClassicEditor}
-                data="<p>행복했던 여행 후기를 공유해 주세요!</p>"
-                onReady={ editor => {
-                    // You can store the "editor" and use when it is needed.
-                    console.log( 'Editor is ready to use!', editor );
-                } }
-                onChange={ ( value, editor ) => {
-                    const data = editor.getData();
-                    setUserWritingValue(data);
-                    console.log(userWritingValue)
-                } }
-                onBlur={ ( event, editor ) => {
-                    console.log( 'Blur.', editor );
-                } }
-                onFocus={ ( event, editor ) => {
-                    console.log( 'Focus.', editor );
-                } }/>
-                
-                </div>
+
                 <div className='button-group'>
                     <styled.DeleteButton
                     onClick={() => {

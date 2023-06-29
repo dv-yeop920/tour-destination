@@ -53,6 +53,7 @@ import { styled } from "styled-components";
             export const Span = styled.span`
                 font-size: 14px;
                 color:#888;
+                margin-right: 10px;
             `;
 
             export const BoxDiv = styled.div`

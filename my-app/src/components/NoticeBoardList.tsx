@@ -13,14 +13,12 @@ const NoticeBoardList:React.FC<PostListType> = ({postList}) => {
     const [userInputValue , setUserInputValue] = useState<string>('');
     const [filteringPost , setFilteringPost] = useState<PostListType>();
 
-
     const handleFilterPost = (userValue:string):void => {
         const filterPost:Post[] = postList.filter((post:Post) => {
             return post.title.includes(userValue);
         });
         setFilteringPost({postList:filterPost});
     }
-
 
     const PostsRender = ():JSX.Element[] => {
         const posts = filteringPost ? filteringPost.postList : postList;
@@ -39,11 +37,8 @@ const NoticeBoardList:React.FC<PostListType> = ({postList}) => {
                         <styled.Span>
                             {post.author}
                         </styled.Span>
-                        <styled.Span className='like'>
-                                ❤️
-                        </styled.Span>
                         <styled.Span className='like-count'>
-                            {post.like}
+                            ❤️ {post.like}
                         </styled.Span>
                         <styled.Span className='watching-count'>
                             조회 {post.views}
