@@ -1,7 +1,7 @@
 import React from 'react';
 import * as styled from '../style/styledComponents';
 
-const CommentModal = ():JSX.Element => {
+const CommentModal = ({setCommentModal}:{setCommentModal:any}):JSX.Element => {
     return(
         <>
         <form
@@ -18,9 +18,20 @@ const CommentModal = ():JSX.Element => {
                 <div></div>
                 <div></div>
                 <div>
+                    <styled.DeleteButton
+                    type='submit'
+                    className='delete-btn'
+                    onClick={() => {
+                        setCommentModal(false);
+                    }}>
+                        취소
+                    </styled.DeleteButton>
                     <styled.DefaultButton 
                     type='submit'
-                    className='default-btn'>
+                    className='default-btn'
+                    onClick={() => {
+                        setCommentModal(false);
+                    }}>
                         등록
                     </styled.DefaultButton>
                 </div>
