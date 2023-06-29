@@ -33,6 +33,7 @@ const PostData:PostListType =
             title: '부산 해운대',
             author: '작성자4',
             content:'재밌지만 어려워',
+            date:'2023-6-29 18:30',
             like: 5,
             views: 10,
             comment: 5

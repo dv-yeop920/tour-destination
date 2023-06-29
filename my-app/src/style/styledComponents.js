@@ -4,7 +4,6 @@ import { styled } from "styled-components";
             export const Navbar = styled.nav`
                 background-color: white;
                 box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px -20px;
-                margin-bottom: 30px;
                 position: sticky;
                 top: 0;
                 z-index:1;
@@ -37,8 +36,8 @@ import { styled } from "styled-components";
             `;
             export const Li = styled.li`
                 list-style: none;
-                padding: 0px 13px 0px 13px;
-                border-bottom: 0.1px solid #ccc;
+                padding: 10px 15px 10px 15px;
+                margin-bottom: 5px;
                 cursor: pointer;
                 background-color: white;
                 display: flex;
@@ -51,9 +50,17 @@ import { styled } from "styled-components";
                 margin-bottom: 20px;
             `;
 
-            export const Author = styled.p`
+            export const Span = styled.span`
                 font-size: 13px;
                 color:#888;
+            `;
+
+            export const BoxDiv = styled.div`
+                padding: 50px 120px 50px 120px;
+                margin-bottom: 5px;
+                background-color: white;
+                height: 20vh;
+                box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px -15px;
             `;
 
             export const DefaultButton = styled.button`
@@ -103,6 +110,7 @@ import { styled } from "styled-components";
                 justify-content: center;
                 align-items: center;
                 margin-bottom: 20px;
+                margin-top: 30px;
             `;
 
             export const ScrollToTopButton = styled.button`

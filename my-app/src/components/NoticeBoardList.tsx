@@ -35,16 +35,24 @@ const NoticeBoardList:React.FC<PostListType> = ({postList}) => {
                         <styled.Title>
                             {post.title}
                         </styled.Title>
-
-                        <styled.Author>
+                        <div>
+                        <styled.Span>
                             {post.author}
-                            <span className='like'>
+                        </styled.Span>
+                        <styled.Span className='like'>
                                 ❤️
-                            </span>
-                            <span className='like-count'>{post.like}</span>
-                            <span className='watching-count'>조회 {post.views}</span>
-                            <span className='comment-count'>댓글 {post.comment}</span>
-                        </styled.Author>
+                        </styled.Span>
+                        <styled.Span className='like-count'>
+                            {post.like}
+                        </styled.Span>
+                        <styled.Span className='watching-count'>
+                            조회 {post.views}
+                        </styled.Span>
+                        <styled.Span className='comment-count'>
+                            댓글 {post.comment}
+                        </styled.Span>
+                        </div>
+                        
                     </div>
 
                     <div className='post-image-container'>
@@ -94,18 +102,20 @@ const NoticeBoardList:React.FC<PostListType> = ({postList}) => {
             style={{
                 color:'rgb(200, 50, 100)'
             }}>
-                <styled.Title>
-                    [공지]
-                    <styled.Author 
+                <div>
+                    <styled.Title>
+                        [공지]
+                    </styled.Title>
+                    <styled.Title 
                     style={{
                         fontSize:'16px',
                         color:'black'
                     }}>
                         게시판 이용 수칙
-                    </styled.Author>
-                </styled.Title>
+                    </styled.Title>
+                </div>
             </styled.Li>
-            {PostsRender()}
+            { PostsRender() }
         </styled.Board>
         </>
         

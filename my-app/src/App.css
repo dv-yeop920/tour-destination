@@ -84,3 +84,27 @@ span {
   align-items: center;
 }
 
+.post-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-content {
+  padding: 60px 120px 60px 120px;
+  background-color: white;
+  border: 2px solid #eee;
+  height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px -15px;
+}
+
+.user-comment-wrap {
+  padding: 10px 120px 10px 120px;
+}
+
+.comment-comment-button {
+  cursor: pointer;
+  color: #888;
+}
+
+
