@@ -51,12 +51,12 @@ import { styled } from "styled-components";
             `;
 
             export const Span = styled.span`
-                font-size: 13px;
+                font-size: 14px;
                 color:#888;
             `;
 
             export const BoxDiv = styled.div`
-                padding: 50px 120px 50px 120px;
+                padding: 40px 120px 50px 120px;
                 margin-bottom: 5px;
                 background-color: white;
                 height: 20vh;

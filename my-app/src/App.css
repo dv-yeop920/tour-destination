@@ -26,10 +26,6 @@
   box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px -15px;
 }
 
-span {
-  margin-right: 5px;
-}
-
 .container {
   max-width: 60%;
   margin: 0 auto;
@@ -99,12 +95,33 @@ span {
 }
 
 .user-comment-wrap {
-  padding: 10px 120px 10px 120px;
+  padding: 10px 120px 5px 120px;
+}
+
+.user-id-box {
+  padding-top: 5px;
 }
 
 .comment-comment-button {
   cursor: pointer;
   color: #888;
+}
+
+.comment-box {
+  padding: 0px 120px 0px 120px;
+}
+
+.comment-input {
+  width: 100%;
+  font-size: large;
+  height: 20vh;
+}
+
+#comment-button-box {
+  padding: 0px 100px 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
