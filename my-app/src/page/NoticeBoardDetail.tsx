@@ -60,15 +60,40 @@ const NoticeBoardDetail:React.FC<PostListType> = ({postList}) => {
                 </p>
                 </div>
 
-                <div className='user-comment-wrap'>
-                    <div className='user-comment-comment'>
+                <div className='user-comment-container'>
+                    <div className='user-comment-count'>
                         <styled.Title>
                             {`댓글 ${post.comment}>`}
                         </styled.Title>
                     </div>
-                    <div className='users-comment'>
-
+                    <div className='users-comment-wrap'>
+                        <ul>
+                            <li>
+                        <div className='user-id-box'>
+                            <h4 className='user-id'>
+                                {post.author}
+                            </h4>
+                        </div>
+                        <div className='user-comment-content'>
+                            <p>하이하이하이하이하이하이하이하이하이</p>
+                        </div>
+                        <div className='user-comment-info'>
+                            <styled.Span>
+                                {post.date && post.date}
+                            </styled.Span>
+                            <styled.Span>
+                                ❤️ {post.like}
+                            </styled.Span>
+                            <styled.Span 
+                            style={{'cursor':'pointer'}}
+                            onClick={handleClickComment}>
+                                답글 쓰기
+                            </styled.Span>
+                        </div>
+                        </li>
+                    </ul>
                     </div>
+                    {commentModal === true ? <CommentModal/> : null}
                     <div
                     className='comment-comment-button'
                     onClick={handleClickComment}>
@@ -77,7 +102,6 @@ const NoticeBoardDetail:React.FC<PostListType> = ({postList}) => {
                         </p>
                     </div>
                 </div>
-                {commentModal === true ? <CommentModal/> : null}
                 </div>
                 )
             });

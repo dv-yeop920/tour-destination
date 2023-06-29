@@ -118,8 +118,14 @@
 .comment-input {
   width: 100%;
   font-size: large;
-  height: 20vh;
+  height: 10vh;
   padding: 30px;
+}
+
+.users-comment {
+  width: 100%;
+  background-color: #eee;
+  height: 5em;
 }
 
 #comment-button-box {

@@ -1,14 +1,14 @@
 import React ,{useState}from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router';
-import PostData from './BoardData';
+import PostData from './data/BoardData';
 import NoticeBoard from './page/NoticeBoard';
 import Header from './components/Header';
 import WritingPage from './page/WritingPage';
 import Main from './page/Main';
 import DestinationSearch from './page/DestinationSearch';
 import NoticeBoardDetail from './page/NoticeBoardDetail';
-import {PostListType} from './model/Board';
+import { PostListType } from './model/Board';
 
 
 const App:React.FC = () => {

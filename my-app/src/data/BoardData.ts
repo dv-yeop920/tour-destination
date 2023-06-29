@@ -1,4 +1,4 @@
-import { PostListType } from './model/Board';
+import { PostListType } from '../model/Board';
 
 
 const PostData:PostListType = 
