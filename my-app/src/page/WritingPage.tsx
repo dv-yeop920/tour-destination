@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import * as styled from '../style/styledComponents';
 import { useNavigate } from 'react-router';
-
-
+// import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 
 const WritingPage = () => {
     const [userWritingValue , setUserWritingValue] = useState<string>('');
