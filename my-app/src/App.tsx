@@ -9,6 +9,8 @@ import Main from './page/Main';
 import DestinationSearch from './page/DestinationSearch';
 import NoticeBoardDetail from './page/NoticeBoardDetail';
 import { PostListType } from './model/Board';
+import Login from './page/Login';
+import SignUp from './page/SignUp';
 
 
 const App:React.FC = () => {
@@ -17,21 +19,42 @@ const App:React.FC = () => {
     <>
     <Header/>
     <Routes>
-      <Route path='/' 
-      element = {<Main/>} />
+      <Route 
+      path='/' 
+      element = {<Main/>} 
+      />
 
-      <Route path='/search' 
-      element = {<DestinationSearch/>} />
+      <Route 
+      path='/login'
+      element = {<Login/>}
+      />
 
-      <Route path='/noticeBoard' 
+      <Route 
+      path='/signUp'
+      element = {<SignUp/>}
+      />
+
+      <Route 
+      path='/search' 
+      element = {<DestinationSearch/>} 
+      />
+
+      <Route 
+      path='/noticeBoard' 
       element = {
-      <NoticeBoard postList={postList.postList}/>}/>
+      <NoticeBoard 
+      postList={postList.postList}/>}
+      />
 
-      <Route path='/writingPage' 
-      element = {<WritingPage />} />
+      <Route 
+      path='/writingPage' 
+      element = {<WritingPage />} 
+      />
 
-      <Route path='/detail/:id' 
-      element = {<NoticeBoardDetail postList = {postList.postList}/>} />
+      <Route 
+      path='/detail/:id' 
+      element = {<NoticeBoardDetail postList = {postList.postList}/>} 
+      />
     </Routes>
     </>
   );

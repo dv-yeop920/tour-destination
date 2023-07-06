@@ -14,6 +14,8 @@ const Header = () => {
                 <styled.MenuItem>Menu 2</styled.MenuItem>
                 <styled.MenuItem>Menu 3</styled.MenuItem>
                 <styled.MenuItem onClick={() => navigate('/noticeBoard')}>자유 게시판</styled.MenuItem>
+                <styled.MenuItem onClick={() => navigate('/login')}>로그인</styled.MenuItem>
+                <styled.MenuItem onClick={() => navigate('/signUp')}>회원 가입</styled.MenuItem>
             </styled.MenuList>
         </styled.Navbar>
         </>

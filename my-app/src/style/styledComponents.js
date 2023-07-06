@@ -106,6 +106,20 @@ import { styled } from "styled-components";
                 box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px -15px;
             `;
 
+            export const UserInput = styled.input`
+                flex:0.5;
+                margin-right: 10px;
+                background-color: #eee;
+                padding: 10px 10px 10px 25px;
+                font-size: 16px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                width: 91%;
+                margin-bottom: 15px;
+                box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px -15px;
+            `;
+
             export const InputBox = styled.div`
                 display: flex;
                 justify-content: center;
@@ -130,3 +144,11 @@ import { styled } from "styled-components";
                 padding-left: 6px;
                 box-shadow: rgba(0, 0, 0, 0.2) -4px 9px 25px 2px;
                 `;
+            
+            export const formContainer = styled.div`
+                width: 400px;
+                margin: auto;
+                margin-top: 30px;
+                box-shadow: #00000059 0px 5px 15px;
+                padding: 25px;
+            `;
