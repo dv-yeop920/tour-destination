@@ -2,7 +2,7 @@ import { Member, Members } from './../model/Member';
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 
-const initialState: Members = {
+export const initialState: Members = {
     members: [],
 };
 

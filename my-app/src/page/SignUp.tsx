@@ -1,33 +1,37 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import * as styled from '../style/styledComponents';
 import { addMember } from '../store/memberSlice';
 
 
+
+
 const SignUp = () => {
+    const init = useSelector((state:any) => state.members)
     const dispatch = useDispatch();
-    const handleSubmit = (e:any):void => {
-        e.preventDefault();
-        const userId = e.target.userId.value;
-        const password = e.target.password.value;
-        const email = e.target.email.value;
-        const name = e.target.name.value;
-        const birthday = e.target.birthday.value;
+    const handleSubmit =  (e:any):void => {
+        const userId = 'asd';
+        const password = 'asd';
+        const email = 'asd';
+        const name = 'asd';
+        const birthday = 'asasda';
     
         dispatch(addMember({ userId, password, email, name, birthday }));
-
-        e.target.reset();
+        console.log(init)
     };
     return (
         <>
-        <styled.formContainer 
-        onSubmit={handleSubmit}>
+        <styled.formContainer
+        onSubmit={(e) => {
+            e.preventDefault() 
+            
+        }}>
         <h1 id='login-title'>회원 가입</h1>
         <form className='login-form'>
         <div className='field'>
             <styled.UserInput
             className ='sign-up user-id' 
-            type='text'
+            type='user-id'
             placeholder='아이디 8~12자리 특수 문자는 제외'/>
         </div>
         <div className="field">
@@ -45,7 +49,7 @@ const SignUp = () => {
         <div className="field">
             <styled.UserInput 
             className ='sign-up user-email' 
-            type='text'
+            type='email'
             placeholder='[선택] 비밀 번호 분실시 이메일'/>
         </div>
         <div className="field">
@@ -57,11 +61,12 @@ const SignUp = () => {
         <div className="field">
             <styled.UserInput 
             className ='sign-up user-birthday' 
-            type='text'
+            type='birthday'
             placeholder='생년 월일 8자리'/>
         </div>
         <div className='button-box'>
             <styled.DefaultButton
+            onClick={handleSubmit}
             id='login-button' 
             type='submit'>
                 회원 가입
