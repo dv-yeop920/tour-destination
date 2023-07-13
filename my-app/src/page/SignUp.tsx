@@ -1,17 +1,34 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import * as styled from '../style/styledComponents';
+import { addMember } from '../store/memberSlice';
+
 
 const SignUp = () => {
+    const dispatch = useDispatch();
+    const handleSubmit = (e:any):void => {
+        e.preventDefault();
+        const userId = e.target.userId.value;
+        const password = e.target.password.value;
+        const email = e.target.email.value;
+        const name = e.target.name.value;
+        const birthday = e.target.birthday.value;
+    
+        dispatch(addMember({ userId, password, email, name, birthday }));
+
+        e.target.reset();
+    };
     return (
         <>
-        <styled.formContainer>
+        <styled.formContainer 
+        onSubmit={handleSubmit}>
         <h1 id='login-title'>회원 가입</h1>
         <form className='login-form'>
         <div className='field'>
-            <styled.UserInput 
+            <styled.UserInput
             className ='sign-up user-id' 
             type='text'
-            placeholder='아이디'/>
+            placeholder='아이디 8~12자리 특수 문자는 제외'/>
         </div>
         <div className="field">
             <styled.UserInput 

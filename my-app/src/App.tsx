@@ -11,6 +11,7 @@ import NoticeBoardDetail from './page/NoticeBoardDetail';
 import { PostListType } from './model/Board';
 import Login from './page/Login';
 import SignUp from './page/SignUp';
+import MyPage from './page/MyPage';
 
 
 const App:React.FC = () => {
@@ -33,6 +34,10 @@ const App:React.FC = () => {
       path='/signUp'
       element = {<SignUp/>}
       />
+
+      <Route 
+      path='/myPage'
+      element = {<MyPage/>}/>
 
       <Route 
       path='/search' 

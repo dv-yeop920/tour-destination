@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { useDispatch } from 'react-redux';
 import posts from './boardSlice';
+import members from './memberSlice';
 
 const Store = configureStore({
     reducer: { 
-        posts: posts.reducer
+        posts: posts.reducer,
+        members: members.reducer,
     }
 });
 
