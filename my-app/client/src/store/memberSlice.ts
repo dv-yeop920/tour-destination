@@ -1,4 +1,4 @@
-import { Member, Members } from './../model/Member';
+import { Member, Members } from '../model/Member';
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 
