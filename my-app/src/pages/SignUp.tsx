@@ -21,13 +21,14 @@ const SignUp = () => {
     };
     return (
         <>
-        <styled.formContainer
+        <styled.formContainer>
+        <h1 id='login-title'>회원 가입</h1>
+        <form 
+        className='login-form'
         onSubmit={(e) => {
             e.preventDefault() 
             
         }}>
-        <h1 id='login-title'>회원 가입</h1>
-        <form className='login-form'>
         <div className='field'>
             <styled.UserInput
             className ='sign-up user-id' 

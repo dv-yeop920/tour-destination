@@ -2,16 +2,16 @@ import React ,{useState}from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router';
 import PostData from './data/BoardData';
-import NoticeBoard from './page/NoticeBoard';
+import NoticeBoard from './pages/NoticeBoard';
 import Header from './components/Header';
-import WritingPage from './page/WritingPage';
-import Main from './page/Main';
-import DestinationSearch from './page/DestinationSearch';
-import NoticeBoardDetail from './page/NoticeBoardDetail';
+import WritingPage from './pages/WritingPage';
+import Main from './pages/Main';
+import DestinationSearch from './pages/DestinationSearch';
+import NoticeBoardDetail from './pages/NoticeBoardDetail';
 import { PostListType } from './model/Board';
-import Login from './page/Login';
-import SignUp from './page/SignUp';
-import MyPage from './page/MyPage';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
+import MyPage from './pages/MyPage';
 
 
 const App:React.FC = () => {
