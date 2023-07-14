@@ -23,6 +23,6 @@
     "include": [
     "my-app",
     "**/*.ts",
-    "**/*.tsx"
-    ]
+    "**/*.tsx",
+    "server.js", "src/style/styledComponents.js"    ]
 }

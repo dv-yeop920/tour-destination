@@ -1,1 +1,1 @@
-# tour-destination
+# 연습한 프로젝트, 파일 경로 문제로 새로운 Repositories로 옮김
